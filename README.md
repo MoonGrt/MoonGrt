@@ -49,7 +49,6 @@
         </picture>
     </tr>
   </table>
-
 </div>
 
 
@@ -93,7 +92,6 @@
 
   <!-- programming tool icon 编程工具图标 -->
   <img src="https://skillicons.dev/icons?i=ps,pr,git,matlab,ubuntu,docker,raspberrypi,ros,arduino&theme=light" /><br>
-
 </div>
 
 
