@@ -118,7 +118,7 @@ SystemVerilog            1 repo              █░░░░░░░░░░�
 
 <!-- MoonGrt markmap -->
 <div align="center">
-  <img src="images/MoonGrt.svg" />
+  <img width="950" height="600" src="images/MoonGrt.svg" />
 </div>
 
 
