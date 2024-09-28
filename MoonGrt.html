@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.2/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"MoonGrt","children":[{"content":"Hardware","children":[{"content":"Digit","children":[{"content":"Simultion","children":[{"content":"Vivado, Modelsim, gtkwave","children":[],"payload":{"lines":"6,7"}}],"payload":{"lines":"5,6"}},{"content":"FPGA","children":[{"content":"Xilinx","children":[{"content":"<a href=\"https://github.com/MoonGrt/SmartCarVision\">SmartCarVision</a>","children":[],"payload":{"lines":"9,10"}},{"content":"<a href=\"https://github.com/MoonGrt/FPGA-Calculator\">Calculator</a>","children":[],"payload":{"lines":"10,11"}}],"payload":{"lines":"8,9"}},{"content":"Gowin","children":[{"content":"<a href=\"https://github.com/MoonGrt/FPGA-CPU\">CPU</a>","children":[],"payload":{"lines":"12,13"}},{"content":"<a href=\"https://github.com/MoonGrt/FPGA-Minecraft\">Minecraft</a>","children":[],"payload":{"lines":"13,14"}}],"payload":{"lines":"11,12"}},{"content":"Elitestek","children":[{"content":"<a href=\"https://github.com/MoonGrt/Elitestek_Videoscaler\">Elitestek_Videoscaler</a>","children":[],"payload":{"lines":"15,16"}}],"payload":{"lines":"14,15"}},{"content":"Basic","children":[{"content":"<a href=\"https://github.com/MoonGrt/FPGA-Comm_Interface\">Comm_Interface</a>","children":[],"payload":{"lines":"17,18"}},{"content":"<a href=\"https://github.com/MoonGrt/FPGA-Image_Process\">Image_Process</a>","children":[],"payload":{"lines":"18,19"}}],"payload":{"lines":"16,17"}}],"payload":{"lines":"7,8"}},{"content":"Layout","children":[{"content":"Electric VLSI","children":[{"content":"<a href=\"https://github.com/MoonGrt/Electric_VLSI_lib\">Blood_Oxygen</a>","children":[],"payload":{"lines":"21,22"}}],"payload":{"lines":"20,21"}}],"payload":{"lines":"19,20"}},{"content":"Knowledge","children":[{"content":"Image Process: Filtering, Scaling, Edge Detection","children":[],"payload":{"lines":"23,24"}},{"content":"CPU - Riscv: CPU Architecture; BUS &amp; Peripherals (GPIO, UART, SPI, IIC ...)","children":[],"payload":{"lines":"24,26"}}],"payload":{"lines":"22,23"}}],"payload":{"lines":"4,5"}},{"content":"Analog","children":[{"content":"Simultion","children":[{"content":"Candence, LTspice","children":[],"payload":{"lines":"28,29"}}],"payload":{"lines":"27,28"}},{"content":"Layout","children":[{"content":"Virtuoso, Electric VLSI","children":[],"payload":{"lines":"30,31"}}],"payload":{"lines":"29,30"}},{"content":"Project","children":[{"content":"Op Amp: Design, Simulation, Layout, Tape-out","children":[],"payload":{"lines":"32,33"}}],"payload":{"lines":"31,32"}},{"content":"PCB","children":[{"content":"<a href=\"https://github.com/MoonGrt/PCB/Altium\">Altium</a>, <a href=\"\">JLC</a>: Design, Draw, Solder, Test","children":[],"payload":{"lines":"34,35"}},{"content":"Engineering: <a href=\"https://github.com/MoonGrt/PCB/tree/master/JLC/stm32_motordrive\">Motor Drive</a>, <a href=\"https://github.com/MoonGrt/PCB/tree/master/JLC/fly_ctrl\">Quadcopter</a>, Power Supply(12-3.3V, 3.3-5V, 3.7-5V)","children":[],"payload":{"lines":"35,36"}}],"payload":{"lines":"33,34"}},{"content":"Knowledge","children":[{"content":"Semiconductor Physics, Electronic Devices, Micro&amp;Nano Technology, Integrated Circuits Design, Power Semiconductor Device","children":[],"payload":{"lines":"37,41"}}],"payload":{"lines":"36,37"}}],"payload":{"lines":"26,27"}}],"payload":{"lines":"2,3"}},{"content":"Software","children":[{"content":"Language","children":[{"content":"C/C++, Python, Java, [Markdown, html]","children":[],"payload":{"lines":"44,46"}}],"payload":{"lines":"43,44"}},{"content":"Embedded Design","children":[{"content":"Algorithm","children":[{"content":"Kalman-Filter, Complementary-Filter, Lungkuta-method ...","children":[],"payload":{"lines":"48,49"}},{"content":"PID(Velocity, Position) ...","children":[],"payload":{"lines":"49,50"}},{"content":"ML: YOLO(<a href=\"https://github.com/MoonGrt/Cruise_Robot\">Litter</a>, <a href=\"https://github.com/MoonGrt/HaiSi-Detect_Fatigue\">Fatigue</a>, <a href=\"https://github.com/MoonGrt/TDPS\">Pedestrian</a>)","children":[],"payload":{"lines":"50,51"}}],"payload":{"lines":"47,48"}},{"content":"Dirver","children":[{"content":"Cameras, Sensors, Motor, Display ...","children":[],"payload":{"lines":"52,53"}}],"payload":{"lines":"51,52"}},{"content":"Project","children":[{"content":"<a href=\"https://github.com/MoonGrt/STM32-Fly_Control\">Quadcopter</a>","children":[],"payload":{"lines":"54,55"}},{"content":"<a href=\"https://github.com/MoonGrt/TDPS\">Smart Car</a>","children":[],"payload":{"lines":"55,56"}},{"content":"<a href=\"https://github.com/MoonGrt/Cruise_Robot\">ROS Robot</a>","children":[],"payload":{"lines":"56,58"}}],"payload":{"lines":"53,54"}}],"payload":{"lines":"46,47"}},{"content":"OS","children":[{"content":"Linux","children":[{"content":"<a href=\"https://github.com/MoonGrt/Licheepi_Nano\">LicheePi</a>: u-boot, kernal, rootfs, driver...","children":[],"payload":{"lines":"60,61"}}],"payload":{"lines":"59,60"}},{"content":"HarmonyOS","children":[{"content":"<a href=\"https://github.com/MoonGrt/HaiSi-Detect_Fatigue\">Fatigue Detection</a>","children":[],"payload":{"lines":"62,63"}}],"payload":{"lines":"61,62"}},{"content":"Andriod","children":[{"content":"<a href=\"https://github.com/MoonGrt/Android-Fingerprint\">Fingerprint</a>","children":[],"payload":{"lines":"64,65"}}],"payload":{"lines":"63,64"}},{"content":"RTOS","children":[{"content":"[Freertos, RT-Thread] Kernal, Driver, Thread Management...","children":[],"payload":{"lines":"66,68"}}],"payload":{"lines":"65,66"}}],"payload":{"lines":"58,59"}},{"content":"UI","children":[{"content":"Qt, imGUI","children":[],"payload":{"lines":"69,70"}},{"content":"PyQt","children":[{"content":"<a href=\"https://github.com/MoonGrt/README_Gen\">README_Gen</a>","children":[],"payload":{"lines":"71,72"}},{"content":"<a href=\"https://github.com/MoonGrt/Testbench_Gen\">Testbench_Gen</a>","children":[],"payload":{"lines":"72,73"}}],"payload":{"lines":"70,71"}},{"content":"tkinter","children":[{"content":"<a href=\"https://github.com/MoonGrt/Elitestek_Videoscaler/tree/master/GUI\">Serial</a>","children":[],"payload":{"lines":"74,76"}}],"payload":{"lines":"73,74"}}],"payload":{"lines":"68,69"}}],"payload":{"lines":"41,42"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>
