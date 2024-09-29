@@ -1,10 +1,15 @@
 name: Wakatime
 
 on:
-  # for manual workflow trigger
-  workflow_dispatch:
+  # Schedule daily updates
   schedule:
     - cron: "0 0 * * *"
+  # Run workflow manually
+  workflow_dispatch:
+  # Run workflow when pushing on master/main
+  push:
+    branches:
+      - master
 
 jobs:
   update-readme:
