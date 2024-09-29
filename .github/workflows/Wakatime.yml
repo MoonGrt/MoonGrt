@@ -1,16 +1,22 @@
-name: Waka Readme
+name: Wakatime
 
 on:
-  # for manual workflow trigger
-  workflow_dispatch:
+  # Schedule daily updates
   schedule:
-     # Runs at 12am IST
-    - cron: '30 18 * * *'
+    - cron: "0 0 * * *"
+  # Run workflow manually
+  workflow_dispatch:
+  # Run workflow when pushing on master
+  push:
+    branches:
+      - master
 
 jobs:
-  update-readme:
-    name: Update Readme with Metrics
+  generate:
+    name: Generate Wakatime
     runs-on: ubuntu-latest
+    timeout-minutes: 10
+
     steps:
       - uses: anmol098/waka-readme-stats@master
         with:
@@ -28,8 +34,7 @@ jobs:
           SHOW_DAYS_OF_WEEK: "True"  # 一周中不同日期进行的提交
           SHOW_LANGUAGE: "False"  # 编码语言
           SHOW_EDITORS: "True"  # 编辑器
-          SHOW_LANGUAGE_PER_REPO: "True"  #  
+          SHOW_LANGUAGE_PER_REPO: "True"  #
           SHOW_SHORT_INFO: "True"  # 用户的简短趣闻信息
           SHOW_LOC_CHART: "False"  # 年份不同季度编写的代码行数
           SYMBOL_VERSION: "1"  # 设置为进度条的符号
-
