@@ -1,3 +1,5 @@
+<!-- https://www.min2k.com/tools/markmap/ -->
+
 # MoonGrt
 
 ## Hardware
@@ -35,8 +37,8 @@
 - [Altium](https://github.com/MoonGrt/PCB/Altium), [JLC](): Design, Draw, Solder, Test
 - Engineering: [Motor Drive](https://github.com/MoonGrt/PCB/tree/master/JLC/stm32_motordrive), [Quadcopter](https://github.com/MoonGrt/PCB/tree/master/JLC/fly_ctrl), Power Supply(12-3.3V, 3.3-5V, 3.7-5V)
 #### Knowledge
-- Semiconductor Physics, Electronic Devices, Micro&Nano Technology, Integrated Circuits Design, Power Semiconductor Device
-
+- Semiconductor Physics, Micro&Nano Technology, Integrated Circuits Design
+- Power Semiconductor Device, Electronic Devices
 
 
 ## Software
