@@ -16,15 +16,39 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
+      # - uses: actions/checkout@v2
+      # - uses: yoshi389111/github-profile-3d-contrib@0.6.0
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      #     USERNAME: ${{ github.repository_owner }}
+      # - name: Commit & Push
+      #   run: |
+      #     git config user.name MoonGrt
+      #     git config user.email 1561145394@qq.com
+      #     git add -A .
+      #     git commit -m "new Profile-3D"
+      #     git push
+
+      # Checkout the repository
       - uses: actions/checkout@v2
+      # Generate the GitHub profile 3D contributions SVG
       - uses: yoshi389111/github-profile-3d-contrib@0.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+      # Move the generated SVG file to the images directory
+      - name: Move generated SVG to images directory
+        run: |
+          mkdir -p images
+          mv *.svg images/
+      # Commit and push changes back to the repository
       - name: Commit & Push
         run: |
-          git config user.name MoonGrt
-          git config user.email 1561145394@qq.com
-          git add -A .
+          git config --local user.name "MoonGrt"
+          git config --local user.email "1561145394@qq.com"
+          git add images/*.svg
           git commit -m "new Profile-3D"
+          git pull --rebase
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
