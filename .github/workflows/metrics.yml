@@ -24,8 +24,6 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_display: large
           config_timezone: Asia/Shanghai
-          plugin_calendar: yes
-          plugin_calendar_limit: 1
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
