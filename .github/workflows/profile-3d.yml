@@ -1,9 +1,15 @@
 name: Profile-3D
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
+  # Schedule daily updates
+  schedule:
     - cron: "0 0 * * *"
+  # Run workflow manually
   workflow_dispatch:
+  # Run workflow when pushing on master/main
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -20,5 +26,5 @@ jobs:
           git config user.name MoonGrt
           git config user.email 1561145394@qq.com
           git add -A .
-          git commit -m "new"
+          git commit -m "new Profile-3D"
           git push
