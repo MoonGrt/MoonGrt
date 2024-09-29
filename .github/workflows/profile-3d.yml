@@ -1,14 +1,22 @@
-name: GitHub-Profile-3D-Contrib
+name: Profile-3D
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
+  # Schedule daily updates
+  schedule:
     - cron: "0 0 * * *"
+  # Run workflow manually
   workflow_dispatch:
+  # Run workflow when pushing on master
+  push:
+    branches:
+      - master
 
 jobs:
-  build:
+  generate:
+    name: Generate Profile-3D
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
+    timeout-minutes: 10
+
     steps:
       - uses: actions/checkout@v2
       - uses: yoshi389111/github-profile-3d-contrib@0.6.0
