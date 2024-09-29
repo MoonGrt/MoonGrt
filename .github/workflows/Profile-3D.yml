@@ -19,16 +19,17 @@ jobs:
 
     steps:
       # Checkout the repository
-      - uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
       # Generate the GitHub profile 3D contributions SVG
-      - uses: yoshi389111/github-profile-3d-contrib@0.6.0
+      - name: generate Profile-3D
+        uses: yoshi389111/github-profile-3d-contrib@0.6.0
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
       # Move the generated SVG file to the images directory
-      - name: Move generated SVG to images directory
+      - name: Move generated SVG
         run: |
-          ls
           mv profile-3d-contrib images/profile-3d
       # Commit and push changes back to the repository
       - name: Commit & Push

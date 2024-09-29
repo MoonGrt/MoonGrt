@@ -44,11 +44,10 @@ jobs:
           plugin_topics_limit: 0
           plugin_topics_mode: icons
 
-      # Move generated SVG to images directory
-      - name: Move Metrics to images folder
-        run: |
-          ls
-
+      # # Move generated SVG to images directory
+      # - name: Move Metrics to images folder
+      #   run: |
+      #     mv github-metrics.svg images/metrics.svg
       # # Commit and push the changes to the current branch
       # - name: Commit and Push changes
       #   run: |
