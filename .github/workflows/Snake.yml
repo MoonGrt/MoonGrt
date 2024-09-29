@@ -77,8 +77,9 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add images/*.svg
-          git commit -m "chore: update Snake.svg"
+          git add image/*.svg
+          git commit -m "chore: update Snake.svg" || echo "No changes to commit"
+          git pull --rebase # 同步远程分支
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
