@@ -40,8 +40,7 @@ jobs:
       - name: Move generated SVG to images directory
         run: |
           ls
-          mkdir -p images
-          mv *.svg images/
+          mv profile-3d-contrib images
       # Commit and push changes back to the repository
       - name: Commit & Push
         run: |
