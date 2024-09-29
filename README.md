@@ -21,9 +21,9 @@
 
   <!-- Snake Code Contribution Map 贪吃蛇代码贡献图 -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./images/grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./images/grid-snake.svg" />
-    <img alt="github-snake" src="./images/grid-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/MoonGrt/MoonGrt/blob/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/MoonGrt/MoonGrt/blob/output/github-contribution-grid-snake.svg" />
+    <img alt="github-snake" src="https://github.com/MoonGrt/MoonGrt/blob/output/github-contribution-grid-snake.svg" />
   </picture>
 
   <img src="/github-metrics.svg" alt="Metrics" width="100%" />
