@@ -30,7 +30,7 @@ jobs:
             images/snake.svg
             images/snake-dark.svg?palette=github-dark
       # Commit and push the changes to the current branch
-      - name: Commit and Push changes
+      - name: Commit & Push
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
