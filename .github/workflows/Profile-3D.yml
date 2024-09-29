@@ -12,25 +12,14 @@ on:
       - master
 
 jobs:
-  build:
+  generate:
+    name: Generate Profile-3D
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
-    steps:
-      # - uses: actions/checkout@v2
-      # - uses: yoshi389111/github-profile-3d-contrib@0.6.0
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      #     USERNAME: ${{ github.repository_owner }}
-      # - name: Commit & Push
-      #   run: |
-      #     git config user.name MoonGrt
-      #     git config user.email 1561145394@qq.com
-      #     git add -A .
-      #     git commit -m "new Profile-3D"
-      #     git push
+    timeout-minutes: 10
 
+    steps:
       # Checkout the repository
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       # Generate the GitHub profile 3D contributions SVG
       - uses: yoshi389111/github-profile-3d-contrib@0.6.0
         env:
@@ -46,7 +35,7 @@ jobs:
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
+          git add images/profile-3d/*.svg
           git commit -m "update Profile-3D" || echo "No changes to commit"
           git pull --rebase
           git push
