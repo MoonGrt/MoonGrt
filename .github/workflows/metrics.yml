@@ -46,12 +46,10 @@ jobs:
           user: MoonGrt
           config_timezone: Asia/Shanghai
           config_display: large
-#          config_display: columns
           committer_message: "chore: update metrics"
           template: classic
           base: header, activity, community, repositories, metadata
           plugin_introduction: yes
-#          plugin_sponsors: yes
 
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
@@ -65,8 +63,6 @@ jobs:
 
           plugin_licenses: yes
           plugin_licenses_setup: npm ci
-
-          plugin_support: yes
 
           plugin_topics: yes
           plugin_topics_limit: 0
