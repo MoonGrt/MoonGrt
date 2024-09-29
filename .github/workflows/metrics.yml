@@ -45,6 +45,7 @@ jobs:
           # Options
           user: MoonGrt
           config_timezone: Asia/Shanghai
+          config_display: large
 #          config_display: columns
           committer_message: "chore: update metrics"
           template: classic
@@ -57,14 +58,6 @@ jobs:
 
           plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
-
-          plugin_achievements: yes
-
-          plugin_achievements_threshold: X
-          plugin_achievements_display: detailed
-
-          plugin_calendar: yes
-          plugin_calendar_limit: 11
           
           plugin_habits: yes
           plugin_habits_facts: yes
@@ -72,9 +65,6 @@ jobs:
 
           plugin_licenses: yes
           plugin_licenses_setup: npm ci
-
-          plugin_stargazers: yes
-          plugin_stargazers_charts_type: chartist
 
           plugin_support: yes
 
