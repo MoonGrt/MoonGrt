@@ -1,4 +1,3 @@
-
 <div align="center">
   <!-- Welcome to my profile -->
   <a><img src="images/Top.svg" /></a>
