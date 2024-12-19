@@ -6,7 +6,7 @@
 
 ### Digit
 #### Language
-- Verilog, VHDL, SpinalHDL, Chisel
+- Verilog, VHDL, Scala(SpinalHDL, Chisel)
 #### Simultion
 - Vivado, Modelsim, gtkwave, verilator, QEMU
 #### FPGA
