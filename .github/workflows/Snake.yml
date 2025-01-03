@@ -39,4 +39,4 @@ jobs:
           git pull --rebase # 同步远程分支
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
