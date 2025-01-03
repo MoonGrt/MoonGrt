@@ -31,7 +31,6 @@ jobs:
           SHOW_PROJECTS: "True"  # 项目
           SHOW_COMMIT: "False"  # 提交信息
           UPDATED_DATE_FORMAT: "False"
-          DEBUG_LOGGING: "False"
           SHOW_DAYS_OF_WEEK: "True"  # 一周中不同日期进行的提交
           SHOW_LANGUAGE: "False"  # 编码语言
           SHOW_EDITORS: "True"  # 编辑器
