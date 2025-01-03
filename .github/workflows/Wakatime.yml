@@ -31,6 +31,22 @@ jobs:
           SHOW_MASKED_TIME: false # optional
           STOP_AT_OTHER: true # optional
           IGNORED_LANGUAGES: YAML JSON TOML # optional
+
+          SHOW_TOTAL_CODE_TIME: "True"  # 总编码时间
+          SHOW_PROFILE_VIEWS: "True"  # 设置为隐藏配置文件视图
+          SHOW_LINES_OF_CODE: "True"   # 截至日期写入的代码行数
+          SHOW_OS: "False"  # 操作系统
+          SHOW_PROJECTS: "False"  # 项目
+          SHOW_COMMIT: "True"  # 提交信息
+          UPDATED_DATE_FORMAT: "False"
+          DEBUG_LOGGING: "False"
+          SHOW_DAYS_OF_WEEK: "True"  # 一周中不同日期进行的提交
+          SHOW_LANGUAGE: "False"  # 编码语言
+          SHOW_EDITORS: "True"  # 编辑器
+          SHOW_LANGUAGE_PER_REPO: "True"  # 每个仓库的编码语言
+          SHOW_SHORT_INFO: "True"  # 用户的简短趣闻信息
+          SHOW_LOC_CHART: "False"  # 年份不同季度编写的代码行数
+
           ### commit
           COMMIT_MESSAGE: Updated waka-readme graph with new metrics # optional
           TARGET_BRANCH: master # optional
