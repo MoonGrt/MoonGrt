@@ -27,7 +27,7 @@ if errorlevel 1 (
 )
 
 :: Push to remote repository
-git push origin main
+git push origin master
 if errorlevel 1 (
     echo Failed to push the code. Please check network connection or permissions.
     pause
