@@ -32,8 +32,8 @@ jobs:
       # Commit and push the changes to the current branch
       - name: Commit & Push
         run: |
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "MoonGrt"
+          git config --local user.email "1561145394@qq.com"
           git add images/*.svg
           git commit -m "update Snake.svg" || echo "No changes to commit"
           git pull --rebase # 同步远程分支
