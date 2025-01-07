@@ -1,7 +1,7 @@
 @echo off
 
 :: Set project path (modify to your project directory)
-cd /d "F:\Project\Github\MoonGrt"
+cd /d "F:\Project\Github\Moon"
 
 :: Display the current directory
 echo Current project path: %cd%
@@ -14,19 +14,8 @@ if errorlevel 1 (
     exit /b
 )
 
-:: Add changes (even if no changes, allow empty commit)
-git add .
-if errorlevel 1 (
-    echo No changes detected, but creating an empty commit...
-    git commit --allow-empty -m "Empty commit on %date% at %time%"
-) else (
-    git commit -m "update"
-    if errorlevel 1 (
-        echo No changes to commit.
-        pause
-        exit /b
-    )
-)
+:: Add changes (empty commit)
+git commit --allow-empty -m "Empty commit on %date% at %time%"
 
 :: Push to remote repository
 git push origin master
