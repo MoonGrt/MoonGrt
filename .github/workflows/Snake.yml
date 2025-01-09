@@ -6,10 +6,10 @@ on:
     - cron: "0 0 * * *"
   # Run workflow manually
   workflow_dispatch:
-  # Run workflow when pushing on master
-  push:
-    branches:
-      - master
+  # # Run workflow when pushing on master
+  # push:
+  #   branches:
+  #     - master
 
 jobs:
   generate:
