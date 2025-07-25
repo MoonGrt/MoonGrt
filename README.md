@@ -3,9 +3,11 @@
   <a><img src="images/Top.svg" /></a>
 
   <!-- dynamic typing effect 动态打字效果 -->
-  <div>
-    <a><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hey, I'm MoonGrt!&center=true&size=27" /></a>
-  </div>
+  <p align="center">
+    <a href="#">
+      <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Hey,+I'm+MoonGrt!&center=true&size=27" />
+    </a>
+  </p>
 
   <!-- profile logo 个人资料徽标 -->
   <div>
