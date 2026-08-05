@@ -3,13 +3,16 @@ name: Snake
 on:
   # Schedule daily updates
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "25 0 * * *"
   # Run workflow manually
   workflow_dispatch:
-  # # Run workflow when pushing on master
-  # push:
-  #   branches:
-  #     - master
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   generate:
@@ -20,10 +23,10 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       # generates a snake game from a github user (<github_user_name>) contributions graph, output a svg animation at <svg_out_path>
       - name: generate Snake.svg
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |

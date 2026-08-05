@@ -3,13 +3,13 @@ name: Metrics
 on:
   # Schedule daily updates
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "5 0 * * *"
   # Run workflow manually
   workflow_dispatch:
-  # Run workflow when pushing on master
-  push:
-    branches:
-      - master
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
 
 jobs:
   generate:
@@ -20,7 +20,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d
         with:
           token: ${{ secrets.GH_TOKEN }}
           # Options

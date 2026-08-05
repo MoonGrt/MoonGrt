@@ -3,13 +3,16 @@ name: Wakatime
 on:
   # Schedule daily updates
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "15 0 * * *"
   # Run workflow manually
   workflow_dispatch:
-  # Run workflow when pushing on master
-  push:
-    branches:
-      - master
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
   generate:
@@ -18,7 +21,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: anmol098/waka-readme-stats@master
+      - uses: anmol098/waka-readme-stats@4db28e08bfd8bac570125799fe1cfdcb23a8c871
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
